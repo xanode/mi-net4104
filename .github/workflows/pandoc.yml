@@ -2,13 +2,23 @@ name: Simple Usage
 
 on: push
 
-
 jobs:
   convert_via_pandoc:
-    runs-on: ubuntu-22.04
-    steps:
-      - run: echo $PATH
-      - uses: docker://pandoc/core:2.9
-        with:
-          args: "readme.md -o readme.pdf" 
+    runs-on: ubuntu-20.04
+    container: 
+      image: pandoc/latex:latest
 
+    steps:
+      # checkout repo contents
+      - uses: actions/checkout@v4
+
+      # run pandoc to generate word doc from markdown
+      - name: run pandoc
+        run: |
+          pandoc -f markdown -t pdf -o "README.pdf" "./README.md" 
+
+      # output generated file to build artifacts
+      - uses: actions/upload-artifact@v3
+        with:
+          name: PDF Readme
+          path: "README.pdf"
