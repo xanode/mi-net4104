@@ -1,4 +1,7 @@
-# Sur la forme
+# Guidelines (in French)
+
+## Sur la forme
+
 Les groupes doivent être composés de 4 ou de 5 personnes, et peuvent être composés de personnes des deux groupes.
 
 L’ensemble du développement devra se faire sur un dépôts Git unique par projet, hébergé sur Github, Gitlab.com ou GitlabEns ; Le coordinateur du module devra être ajouté au dépôt git dès la prochaine séance.
@@ -19,7 +22,8 @@ Le rapport devra être rédigé en markdown, tracké dans Git dès le début du 
 
 La présentation finale durera 15 minutes (900 secondes) maximum, et prendra la forme d’une vidéo à m’envoyer avant le 2 mai 2024 à 23h59. Ces vidéos seront projetées lors de l’évaluation finale qui aura lieu le 3 mai 2024 à 10h, et seront évaluées par les pairs (c’est-à-dire vous) en utilisant une grille de notation en cours de conception, et qui sera envoyée prochainement.
 
-# Sur le fond
+## Sur le fond
+
 Le projet doit être centré sur les réseaux sans-fils : Bluetooth, BLE, Wi-Fi, Réseaux Cellulaire, Radios Logicielles, Capteurs, …
 
 Le projet doit posséder au moins une des colorations suivantes :

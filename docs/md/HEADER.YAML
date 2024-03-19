@@ -1,0 +1,31 @@
+---
+title: "Man-in-the-Middle attack on WPA2-Enterprise networks."
+author: "Nicolas Rocq, Benoit Marzelleau, Baptiste Sauvé, Baptiste Legros, Tom Burellier"
+date:
+subtitle: "Project for the Télécom SudParis course NET4104."
+geometry: "left=2.54cm,right=2.54cm,top=1.91cm,bottom=1.91cm"
+titlepage: true
+titlepage-color: "FFFFFF"
+titlepage-text-color: "000000"
+titlepage-rule-color: "CCCCCC"
+titlepage-rule-height: 4
+titlepage-logo: "files/tsp.png"
+logo-width: 100pt
+page-background:
+page-background-opacity:
+links-as-notes: true
+lot: false
+lof: false
+listings-disable-line-numbers: true
+listings-no-page-break: false
+disable-header-and-footer: false
+header-left:
+header-center:
+header-right:
+footer-left: "© Télécom SudParis"
+footer-center: "2024"
+footer-right:
+subparagraph: true
+lang: en-US
+---
+
