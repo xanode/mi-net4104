@@ -1,24 +1,36 @@
-name: Simple Usage
+name: Build PDF Document
 
-on: push
+on:
+  push:
+    paths:
+      - '.github/workflows/*'
+      - 'docs/md/*'
 
 jobs:
-  convert_via_pandoc:
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ubuntu-latest
+    
     container: 
-      image: pandoc/latex:latest
-
+      image: knsit/pandoc:latest
+      options: --user root
+    
     steps:
-      # checkout repo contents
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # run pandoc to generate word doc from markdown
-      - name: run pandoc
+      - name: Build PDF
         run: |
-          pandoc -f markdown -t pdf -o "README.pdf" "./README.md" 
+          cd "$SOURCE_DIR"
+          pandoc -s -o "$DEST_FILE_NAME" -f "$SOURCE_FORMAT" --data-dir="$DATA_DIR" --template "$TEMPLATE" --toc --listings --columns=50 --number-sections --dpi=300 --pdf-engine xelatex -M date="$(date +%Y-%m-%d)" md/HEADER.YAML md/*.md
+        env:
+          SOURCE_DIR: docs
+          DEST_FILE_NAME: "rendu.pdf"
+          TEMPLATE: "eisvogel.tex"
+          SOURCE_FORMAT: markdown_strict+backtick_code_blocks+pipe_tables+auto_identifiers+yaml_metadata_block+implicit_figures+table_captions+footnotes+smart+escaped_line_breaks+header_attributes
+          DATA_DIR: pandoc
 
-      # output generated file to build artifacts
-      - uses: actions/upload-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: PDF Readme
-          path: "README.pdf"
+          name: Rendu au format PDF
+          path: docs/rendu.pdf
