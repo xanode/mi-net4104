@@ -44,22 +44,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Environment
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y unzip
-
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: rendu
           path: .
-
-      - name: Unzip Artifact
-        run: |
-          pwd && ls
-          locate rendu.zip
-          unzip rendu.zip
 
       - name: Commit PDF
         run: |
