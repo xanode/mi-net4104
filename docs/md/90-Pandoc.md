@@ -1,7 +1,7 @@
 
-# Annexe
+# Annexes
 
-### Génération de pdf avec pandoc
+## Génération de pdf avec pandoc
 
 Nous avons été amenés à nous pencher sur un moyen de générer un rendu PDF de notre travail qui soit à la fois joli et facile à mettre en place, c'est à dire ne nécessitant pas de compétences particulières en LaTeX
 
