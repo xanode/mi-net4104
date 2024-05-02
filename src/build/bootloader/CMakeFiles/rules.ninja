@@ -318,7 +318,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/balmine/esp/esp-idf/components/bootloader/subproject -B/home/balmine/git/mi-net4104/build/bootloader
+  command = /usr/bin/cmake --regenerate-during-build -S/home/balmine/esp/esp-idf/components/bootloader/subproject -B/home/balmine/git/mi-net4104/src/build/bootloader
   description = Re-running CMake...
   generator = 1
 

@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/CMakeFiles/bootloader"
+			"file" : "/home/balmine/git/mi-net4104/src/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/balmine/git/mi-net4104/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/balmine/git/mi-net4104/src/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

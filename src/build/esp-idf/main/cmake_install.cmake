@@ -1,4 +1,4 @@
-# Install script for directory: /home/balmine/git/mi-net4104/main
+# Install script for directory: /home/balmine/git/mi-net4104/src/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,0 +1,68 @@
+[1/5] cd /home/balmine/git/mi-net4104/src/build/esp-idf/esptool_py && /home/balmine/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/balmine/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/balmine/git/mi-net4104/src/build/partition_table/partition-table.bin /home/balmine/git/mi-net4104/src/build/hello_world.bin
+hello_world.bin binary size 0xb9ee0 bytes. Smallest app partition is 0x100000 bytes. 0x46120 bytes (27%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/balmine/git/mi-net4104/src/build/bootloader/esp-idf/esptool_py && /home/balmine/.espressif/python_env/idf5.2_py3.11_env/bin/python /home/balmine/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/balmine/git/mi-net4104/src/build/bootloader/bootloader.bin
+Bootloader binary size 0x5250 bytes. 0x2db0 bytes (36%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/balmine/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/balmine/esp/esp-idf -D "SERIAL_TOOL=/home/balmine/.espressif/python_env/idf5.2_py3.11_env/bin/python;;/home/balmine/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/balmine/git/mi-net4104/src/build -P /home/balmine/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 hello_world.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.1)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: 7c:df:a1:e7:9a:24
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000c9fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 21072 bytes to 13073...
+Writing at 0x00000000... (100 %)
+Wrote 21072 bytes (13073 compressed) at 0x00000000 in 0.5 seconds (effective 354.2 kbit/s)...
+Hash of data verified.
+Compressed 761568 bytes to 473345...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001d0b6... (6 %)
+Writing at 0x00025514... (10 %)
+Writing at 0x0002a347... (13 %)
+Writing at 0x0003612e... (17 %)
+Writing at 0x0003c572... (20 %)
+Writing at 0x000425c9... (24 %)
+Writing at 0x000489b1... (27 %)
+Writing at 0x0004eb77... (31 %)
+Writing at 0x00054997... (34 %)
+Writing at 0x0005a322... (37 %)
+Writing at 0x0005f2ad... (41 %)
+Writing at 0x000643d4... (44 %)
+Writing at 0x000692f9... (48 %)
+Writing at 0x0006e6be... (51 %)
+Writing at 0x00073aaa... (55 %)
+Writing at 0x0007947c... (58 %)
+Writing at 0x0007eda5... (62 %)
+Writing at 0x000849e1... (65 %)
+Writing at 0x0008a629... (68 %)
+Writing at 0x00090046... (72 %)
+Writing at 0x00095b15... (75 %)
+Writing at 0x0009b819... (79 %)
+Writing at 0x000a1c4a... (82 %)
+Writing at 0x000a7402... (86 %)
+Writing at 0x000ae301... (89 %)
+Writing at 0x000b894b... (93 %)
+Writing at 0x000be6c4... (96 %)
+Writing at 0x000c4efe... (100 %)
+Wrote 761568 bytes (473345 compressed) at 0x00010000 in 8.5 seconds (effective 713.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 390.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

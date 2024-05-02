@@ -1,4 +1,4 @@
-/* * Data converted from /home/balmine/git/mi-net4104/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/balmine/git/mi-net4104/src/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

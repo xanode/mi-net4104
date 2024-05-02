@@ -1,2 +1,2 @@
-idf_component_register(SRCS "esp_wifi.c" "hello_world_main.c"
+idf_component_register(SRCS "esp_wifi.c"
                     INCLUDE_DIRS "")
