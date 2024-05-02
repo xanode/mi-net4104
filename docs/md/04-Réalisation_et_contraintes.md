@@ -24,7 +24,14 @@ Donc finalement, nous avons pu à l'aide de documentation en ligne émettre un r
 
 Donc, on doit encore écarter cette solution, et en trouver une autre, qui intègre directement l'aspect interception des données, la partie à la limite de l'illégal en somme.
 
-### Solution finale : Hostpad-Wpe
+### Solution finale : Hostapd-WPE
 
+Nous voilà à cours de solutions, il nous fallait trouver une alternative pour devenirs de gentils petits hackers très malveillants et intercepter les paquets chiffrés. 
+
+Nous sommes tombés un peu au hasard sur le package Hostapd-wpe (big up au moteur de recherche Google).
+
+Ce package contient une version modifiée de hostapd avec le patch hostapd-wpe. Il met en œuvre des attaques d'usurpation d'Authentificateur IEEE 802.1x pour obtenir les informations d'identification des clients. Bah c'est super ! C'est exactement ce dont on a besoin.
+
+Sans rentrer dans les détails, car ils sont dans la partie `03-Attaque`, nous avons configurer le point d'accès malveillant à l'aide de `hostapd-wpe` qui permet de réaliser l'attaque "evil twin" et surtout d'obtenir les informations d'identification du client échangés lors de l'authentification.
 
 
