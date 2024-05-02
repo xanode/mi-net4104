@@ -15,7 +15,7 @@ page-background:
 page-background-opacity:
 links-as-notes: true
 lot: false
-lof: false
+lof: true
 listings-disable-line-numbers: true
 listings-no-page-break: false
 disable-header-and-footer: false

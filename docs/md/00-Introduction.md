@@ -1,8 +1,16 @@
 # Introduction
 
-In this project, we will explore a **MITM** (Man-in-the-Middle) attack on **WPA2-Enterprise** networks that **do not validate the CA** (Certificate Authority) certificate. This is exploiting the fact that the client does not validate the server's certificate, and the server does not validate the client's certificate. This is a common configuration in many enterprise networks, as it is easier to manage.
+Ce projet vise à exploiter une faiblesse de configuration rencontrée dans la majorité des réseaux WPA2-Entreprise. En effet, il est très courant que les clients n'aient pas mis en oeuvre la validation du certificat CA, ce qui permet à un tier d'usurper l'identité d'un point d'accès Wi-Fi utilisant le mécanisme de sécurité WPA2-Entreprise.
 
-## Contributors
+En particulier, on s'intéressera aux réseaux utilisant le protocole d'authentification PEAP-MSCHAPv2 pour sa popularité. En l'espèce, on montrera dans quel mesure la faiblesse de configuration susmentionnée permet d'obtenir l'empreinte MD4 du mot de passe de l'utilisateur.
+
+## Contributeurs
+
+Encadrant : 
+
+- [Rémy Grünblatt](https://github.com/rgrunbla)
+
+Étudiants :
 
 - [Nicolas Rocq](https://github.com/Nishogi)
 - [Benoit Marzelleau](https://github.com/xanode)
