@@ -3,7 +3,7 @@
 
 Le protocole EAP (*Extensible Authentification Protocol*) est un protocole de communication réseau qui est utilisé pour authentifier un partenaire.
 
-![Séquence MSCHAPv2](files/eap.png)
+![Fonctionnement EAP](files/eap.png)
 
 Il y a 3 grandes étapes dans la communication entre un partenaire et l'authentificateur (*respectivement Peer et Authenticator ci-dessus*) :
 - Une phase d'identification, l'authenticator envoie une requête au peer et recoit une réponse.
