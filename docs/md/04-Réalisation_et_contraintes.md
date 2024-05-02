@@ -14,7 +14,7 @@ Une fois l’environnement mis en place et avoir compris comment fonctionnait l�
 Après l'échec de l'ESP32, il a donc fallu prendre en main la nouvelle technologie qui est la suivante : Une borne cisco sous OpenWRT.
 
 L'avantage : il existe une magnifique interface HTTP pour gérer l'ensemble des fonctionnalités premières de la borne.
-L'inconvéniant : c'est quand même vachement plus compliqué de setup une borne Cisco plutôt qu'un ESP32, mais bon le choix
+L'inconvéniant : c'est quand même vachement plus compliqué de setup une borne Cisco plutôt qu'un ESP32, mais bon avait pas le choix.
 
 Nous avons donc pris du temps pour comprendre le fonctionnement du nouveau matériel et mettre en place notre nouvel environnement de travail. Première étape : il s'agissait de flash notre magnifique nouvelle borne. Je passe l'étape ou nous avons flash la borne 3 ou 4 fois parce que ça marchait pas pour des raisons obscurs, et la fois ou on a flash une snapshot ce qui a donné une image incomplète, sans les drivers wifi, donc impossible d'émettre quoi que ce soit !
 
