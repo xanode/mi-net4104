@@ -57,6 +57,8 @@ jobs:
 
       - name: Unzip Artifact
         run: |
+          pwd && ls
+          locate rendu.zip
           unzip rendu.zip
 
       - name: Commit PDF
