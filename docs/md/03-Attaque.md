@@ -51,7 +51,8 @@ wpa_pairwise=TKIP CCMP
 sudo hostapd-wpe hostapd-wpe.conf -s
 ```
 
-Voici les logs de hostapd-wpe lorsqu'un client se connecte :
+Voici les logs de hostapd-wpe lorsqu'un client se connecte
+
 ![Logs de Hostapd-wpe](files/Hostapd-log.png)
 
 Comme on peut le voir sur le logs, on a hostpad-wpe qui nous donne directement ce que nous devons donner à haschat pour retrouver le mots de passe utilisé. 
