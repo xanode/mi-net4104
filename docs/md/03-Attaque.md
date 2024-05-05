@@ -51,6 +51,22 @@ wpa_pairwise=TKIP CCMP
 sudo hostapd-wpe hostapd-wpe.conf -s
 ```
 
+Voici les logs de hostapd-wpe lorsqu'un client se connecte :
+![Logs de Hostapd-wpe](files/hostapd-log.png)
+
+Comme on peut le voir sur le logs, on a hostpad-wpe qui nous donne directement ce que nous devons donner à haschat pour retrouver le mots de passe utilisé. 
+
+Ensuite la manière simple de récupéré le mots de passe si le mots de passe du client est simple est d'utilisé haschat avec une attaque par dictionnaire en utilisant la base de mots de passe la plus connu : rockyou.txt
+
+```bash
+# Lance le point d'accès malveillant
+hashcat64.exe -m 5500 -a 0 <Le challenge md4 que nous donne hostapd-wpe> rockyou.txt 
+```
+
+Si le mots de passe est simple il est souvent dans la base de mots de passe de rockyou.txt et donc on peut le retrouver facilement.
+
+![Logs de hashcat](files/Hashcat.png)
+
 
 ## MSCHAPv2
 
