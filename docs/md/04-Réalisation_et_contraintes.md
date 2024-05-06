@@ -42,6 +42,8 @@ Cette solution nous a permis d'arriver à la solution finale de notre projet, l'
 
 ![Magnifique Raspberry Pi 1 Model B+ (merci MiNET)](files/raspberry-pi-1.jpg)
 
+Finalement, nous n'avons pas réussi à flash kali linux sur la raspberry, nous avons donc utilisé une live image de kali linux sur une clé usb, ou nous avons installé hostapd-wpe.
+
 
 ## Réalisations détaillées
 
