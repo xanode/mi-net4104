@@ -1,6 +1,6 @@
 # MSCHAPv2
 
-Le protocole MSCHAPv2 est un protocole d'authentification de type CHAP (*Challenge Handshake Authentication Protocol*). L'objectif de cette classe de protocoles est de permettre à un client de s'authentifier en respectant les critères suivants :
+MSCHAPv2 est une méthode d'authentification de type CHAP (*Challenge Handshake Authentication Protocol*). L'objectif de cette classe de protocoles est de permettre à un client de s'authentifier en respectant les critères suivants :
 - pas d'échange en clair du mot de passe ou d'une empreinte de celui-ci ;
 - rejouabilité des échanges de nul effet pour un tier qui l'aurait intercepté.
 
