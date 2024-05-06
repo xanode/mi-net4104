@@ -9,6 +9,7 @@ Pour mettre en place notre solution de jumeau maléfique sur les bornes eduroam,
 Une fois l’environnement mis en place et avoir compris comment fonctionnait l’ESP32 nous avons été mis devant la dure réalité que l'ESP 32-S3 ne supportait pas le WPA2 Entreprise en mode access point "ESP32-S3 supports Wi-Fi Enterprise only in station mode." de cette documentation [https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/api-guides/wifi-security.html], ce qui a résulté en la perte de plusieurs longues heures de travail. La conclusion suite à cet échec fut la suivante, il nous fallait un nouveau point d'accès wifi comme une borne. Après quelques discussions avec le professeur, il a pu nous fournir une borne Cisco flashé sous OpenWRT.
     
 ![Magnifique carte ESP32-S3](files/esp32-S3.jpg)
+<img src="files/esp32-S3.jpg" alt="Magnifique carte ESP32-S3" width="500" height="300">
 
 ### 2ème solution : La borne OpenWRT
 
