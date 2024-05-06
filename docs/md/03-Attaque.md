@@ -71,9 +71,7 @@ Si le mots de passe est simple il est souvent dans la base de mots de passe de r
 
 ## MSCHAPv2
 
-Supposons que nous souhaitons nous authentifier auprès d'un réseau Wi-Fi utilisant le protocole PEAP-MSCHAPv2. Pour obtenir les informations d'authentification de d'un utilisateur du réseau cible, diffuser un point d'accès Wi-Fi avec le même SSID que le réseau cible suffit, à condition que les clients tentent de s'y connecter en ne vérifiant pas le certificat CA du serveur d'authentification.
-
-Dès lors, nous pouvons nous concentrer auprès de la méthode d'authentification (MSCHAPv2), et remarquer que l'empreinte MD4 du mot de passe de l'utilisateur est suffisante pour s'authentifier en ce qu'elle agit comme le mot de passe lui-même.
+Maintenant que nous avons obtenu les informations d'identification du client, nous allons nous intéresser à la manière dont nous pouvons les utiliser pour obtenir le mot de passe de l'utilisateur et nous connecter au réseau à l'aide de ces informations. Nous pouvons nous concentrer auprès de la méthode d'authentification (MSCHAPv2), et remarquer que l'empreinte MD4 du mot de passe de l'utilisateur est suffisante pour s'authentifier en ce qu'elle agit comme le mot de passe lui-même (cf. section au sujet de MSCHAPv2).
 
 ### Attaque par dictionnaire ?
 
